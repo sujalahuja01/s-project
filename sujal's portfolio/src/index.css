@@ -1,0 +1,24 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --primary-white: #ffffff;
+  --bg-violet: #170a24;
+  --nav-call: #fa614f;
+  --secondary-color: #ff9800;
+  --accent-color: #2196f3;
+}
+body {
+  background-color: var(--bg-violet);
+}
+
+main {
+  color: aliceblue;
+}
+
+.hi {
+  font-size: xx-large;
+}

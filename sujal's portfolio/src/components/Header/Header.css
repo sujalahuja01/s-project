@@ -1,0 +1,10 @@
+.a {
+  position: relative;
+}
+.header-grid {
+  width: 1920px;
+  height: 900px;
+  position: absolute;
+  left: 172px; /* X position */
+  top: 240px;
+}

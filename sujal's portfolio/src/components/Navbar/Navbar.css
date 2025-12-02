@@ -1,0 +1,54 @@
+.navbar-container {
+  position: fixed;
+  top: 0px;
+  max-width: 1920px;
+  width: 100%;
+  padding: 40px 300px 0px 300px;
+  z-index: 1000;
+}
+.nav-chat-btn {
+  background-color: var(--nav-call);
+  border: none;
+  height: 3.35rem;
+  width: 11rem;
+  border-radius: 2rem;
+  color: var(--primary-white);
+}
+.navbar-inner {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0.5rem 1r;
+}
+.nav-ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column; /* Mobile default */
+  gap: 1rem;
+}
+
+@media (min-width: 640px) {
+  .nav-ul {
+    flex-direction: row; /* Desktop */
+    gap: 2rem;
+  }
+}
+
+.nav-link {
+  text-decoration: none;
+  font-size: 1rem;
+  color: #cccccc;
+  transition: color 0.3s;
+}
+
+.nav-link:hover {
+  color: #ffffff;
+}
+.tele-img {
+  width: 18px;
+  height: 12.5px;
+  margin-right: 3px;
+}
