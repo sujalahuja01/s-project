@@ -1,0 +1,95 @@
+.about {
+  position: relative; /* needed for absolute shape */
+  display: flex;
+  gap: 60px;
+  margin: 0 0 0 300px;
+}
+
+.about > * {
+  position: relative;
+  z-index: 5; /* content stays above the shape */
+}
+
+.wiggly-frame {
+  position: relative;
+}
+.experience {
+  position: absolute;
+  top: 0;
+  left: 28px;
+  width: 113px;
+  height: 143px;
+}
+.up-arrow {
+  position: absolute;
+  bottom: 5px;
+  right: 0px;
+  width: 113px;
+  height: 143px;
+}
+.exp-years {
+  color: var(--brand-orange);
+  font-size: 65px;
+  font-weight: 800;
+}
+.experience span {
+  color: var(--text-white);
+  font-size: 22px;
+  font-weight: 400;
+}
+.about-title {
+  font-size: 20px;
+  font-weight: 300;
+  color: var(--brand-orange);
+  margin-bottom: 15px;
+}
+.about-title span {
+  margin-left: 10px;
+}
+
+.about-desc {
+  font-size: 56px;
+  font-weight: 700;
+  line-height: 67px;
+  margin-bottom: 15px;
+}
+
+.right {
+  max-width: 700px;
+  width: 100%;
+  min-width: 0;
+}
+
+.right-content p {
+  font-size: 20px;
+  font-weight: 300;
+  line-height: 30px;
+  margin-bottom: 50px;
+}
+.points {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 40px;
+
+  display: grid;
+  grid-template-columns: repeat(2, auto); /* two columns */
+  column-gap: 80px; /* space between columns */
+  row-gap: 16px; /* space between items */
+}
+
+.points li {
+  display: flex;
+  align-items: center;
+  gap: 10px; /* space between icon and text */
+  font-size: 18px;
+  font-weight: 300;
+  color: var(--text-white);
+}
+
+.points li img {
+  width: 20px;
+  height: 20px;
+  filter: brightness(0) saturate(100%) invert(59%) sepia(84%) saturate(3510%)
+    hue-rotate(341deg) brightness(101%) contrast(98%);
+  /* This tint makes the arrow match your brand-orange */
+}

@@ -1,54 +1,162 @@
-.navbar-container {
+/* NAVBAR WRAPPER */
+.navbar {
   position: fixed;
-  top: 0px;
-  max-width: 1920px;
+  inset: 40px 0 auto 0;
   width: 100%;
-  padding: 40px 300px 0px 300px;
-  z-index: 1000;
-}
-.nav-chat-btn {
-  background-color: var(--nav-call);
-  border: none;
-  height: 3.35rem;
-  width: 11rem;
-  border-radius: 2rem;
-  color: var(--primary-white);
-}
-.navbar-inner {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0.5rem 1r;
-}
-.nav-ul {
-  list-style: none;
-  display: flex;
-  flex-direction: column; /* Mobile default */
-  gap: 1rem;
+  z-index: 50;
+  backdrop-filter: blur(12px);
+  margin-bottom: 56px;
 }
 
-@media (min-width: 640px) {
-  .nav-ul {
-    flex-direction: row; /* Desktop */
-    gap: 2rem;
-  }
+.tele-img {
+  width: 18px;
+  height: 18px;
+}
+
+.chat-btn {
+  color: var(--text-white);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  font-family: "Outfit", "Poppins", sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  height: 54px;
+  width: 175px;
+  background-color: var(--brand-orange);
+  border: none;
+  border-radius: 2rem;
+  padding: 14.5px 0;
+}
+
+/* INNER CONTAINER */
+.nav-inner {
+  max-width: 1320px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-logo:hover {
+  color: var(--text-white);
+}
+
+/* DESKTOP NAVIGATION */
+.desktop-nav {
+  display: none;
+}
+
+.nav-ul {
+  display: flex;
+  gap: 65px;
+  list-style: none;
+}
+
+.nav-li {
+  color: var(--text-white);
+  font-weight: 300;
+  font-size: 20px;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.nav-li:hover {
+  color: var(--text-white);
 }
 
 .nav-link {
   text-decoration: none;
-  font-size: 1rem;
-  color: #cccccc;
-  transition: color 0.3s;
+  color: inherit;
 }
 
-.nav-link:hover {
-  color: #ffffff;
+/* HAMBURGER BUTTON */
+.hamburger {
+  display: flex;
+  cursor: pointer;
+  background: none;
+  border: none;
 }
-.tele-img {
-  width: 18px;
-  height: 12.5px;
-  margin-right: 3px;
+
+.hamburger img {
+  width: 26px;
+  height: 26px;
+}
+
+/* MOBILE MENU */
+.mobile-menu {
+  display: none;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(18px);
+  padding: 20px 0;
+  text-align: center;
+  overflow: hidden;
+  transition: all 0.4s ease-in-out;
+}
+
+.mobile-menu.show {
+  display: block;
+}
+
+.mobile-menu .nav-ul {
+  flex-direction: column;
+  gap: 18px;
+}
+
+/* ---------------------------
+   RESPONSIVE BREAKPOINTS
+--------------------------- */
+
+@media (min-width: 768px) {
+  .chat-btn {
+    display: flex;
+  }
+
+  /* .nav-inner {
+    padding: 0 10px;
+  } */
+
+  .desktop-nav {
+    display: flex;
+  }
+
+  .hamburger {
+    display: none;
+  }
+
+  .mobile-menu {
+    display: none !important;
+  }
+}
+
+@media (min-width: 1024px) {
+  /* .nav-inner {
+    padding: 0 20px;
+  } */
+
+  .desktop-nav {
+    display: flex;
+  }
+
+  .hamburger {
+    display: none;
+  }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
 }

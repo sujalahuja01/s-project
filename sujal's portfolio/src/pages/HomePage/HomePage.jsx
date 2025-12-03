@@ -1,12 +1,16 @@
 import Navbar from "../../components/Navbar/Navbar.jsx";
-import Header from "../../components/Header/Header.jsx";
+import Hero from "../../components/Hero/Hero.jsx";
+import Logos from "../../components/Logos/Logos.jsx";
+import About from "../../components/About/About.jsx";
 
 const HomePage = () => {
   return (
     <>
-      <Navbar />
       <main>
-        <Header />
+        <Navbar />
+        <Hero />
+        <Logos />
+        <About />
       </main>
     </>
   );

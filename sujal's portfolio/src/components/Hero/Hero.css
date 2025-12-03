@@ -1,0 +1,67 @@
+.hero {
+  position: relative;
+  min-height: 960px;
+}
+
+.hero-grid {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  object-fit: cover;
+  pointer-events: none;
+}
+
+.hero-content {
+  position: absolute;
+  top: 300px;
+  left: 300px;
+  z-index: 5;
+}
+
+.intro-text {
+  font-size: 76px;
+  font-weight: 800;
+}
+.aposs-top {
+  color: var(--brand-orange);
+}
+.aposs-wrapper {
+  position: relative;
+  display: inline-block;
+  width: 25px;
+}
+
+.aposs-base {
+  position: absolute;
+  top: 21px;
+  right: 5px;
+}
+.wave-icon {
+  margin-left: 25px;
+}
+.desc-text {
+  font-size: 22px;
+  font-weight: 400;
+  margin-top: 39px;
+}
+.hero-btn {
+  background: none;
+  color: var(--brand-orange);
+  padding: 17px 32px;
+  font-weight: 400;
+  font-size: 20px;
+  border: none;
+  border-radius: 2rem;
+  border: 2px solid var(--brand-orange);
+  margin-top: 59px;
+}
+.hero-btn span {
+  margin-left: 10px;
+}
+.hero-img {
+  position: absolute;
+  top: 185px;
+  right: 331px;
+  margin-bottom: 80px;
+}
