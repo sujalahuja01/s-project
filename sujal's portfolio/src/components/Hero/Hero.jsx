@@ -34,8 +34,8 @@ const Header = () => {
             <img src={arrow} alt="" />
           </span>
         </button>
+        <img src={image} alt="" className="hero-img" />
       </div>
-      <img src={image} alt="" className="hero-img" />
     </section>
   );
 };

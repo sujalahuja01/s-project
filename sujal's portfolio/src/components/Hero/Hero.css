@@ -1,6 +1,8 @@
 .hero {
-  position: relative;
+  /* position: relative; */
   min-height: 960px;
+  max-width: 1320px;
+  width: 100%;
 }
 
 .hero-grid {
@@ -59,9 +61,9 @@
 .hero-btn span {
   margin-left: 10px;
 }
-.hero-img {
+/* .hero-img {
   position: absolute;
   top: 185px;
   right: 331px;
   margin-bottom: 80px;
-}
+} */

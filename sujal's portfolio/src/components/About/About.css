@@ -2,7 +2,7 @@
   position: relative; /* needed for absolute shape */
   display: flex;
   gap: 60px;
-  margin: 0 0 0 300px;
+  margin: 0px 0 200px 300px;
 }
 
 .about > * {
@@ -15,7 +15,7 @@
 }
 .experience {
   position: absolute;
-  top: 0;
+  top: 5px;
   left: 28px;
   width: 113px;
   height: 143px;
@@ -39,7 +39,7 @@
 }
 .about-title {
   font-size: 20px;
-  font-weight: 300;
+  font-weight: 400;
   color: var(--brand-orange);
   margin-bottom: 15px;
 }
@@ -55,6 +55,7 @@
 }
 
 .right {
+  margin-top: 40px;
   max-width: 700px;
   width: 100%;
   min-width: 0;
@@ -69,27 +70,41 @@
 .points {
   list-style: none;
   padding: 0;
-  margin: 0 0 40px;
-
+  margin: 0 0 50px;
   display: grid;
-  grid-template-columns: repeat(2, auto); /* two columns */
-  column-gap: 80px; /* space between columns */
-  row-gap: 16px; /* space between items */
+  grid-template-columns: repeat(2, auto);
+  row-gap: 18px;
 }
 
 .points li {
   display: flex;
   align-items: center;
-  gap: 10px; /* space between icon and text */
-  font-size: 18px;
+  gap: 10px;
+  font-size: 20px;
   font-weight: 300;
   color: var(--text-white);
 }
 
-.points li img {
-  width: 20px;
-  height: 20px;
-  filter: brightness(0) saturate(100%) invert(59%) sepia(84%) saturate(3510%)
-    hue-rotate(341deg) brightness(101%) contrast(98%);
-  /* This tint makes the arrow match your brand-orange */
+.download-btn {
+  display: flex;
+  width: 220px;
+  height: 62px;
+  background: none;
+  color: var(--brand-orange);
+  border: none;
+  border-radius: 2rem;
+  border: 2px solid var(--brand-orange);
+  font-size: 20px;
+  font-weight: 500;
+  justify-content: center;
+  align-items: center;
+}
+.download-btn span {
+  margin-right: 10px;
+  margin-top: 5px;
+}
+.blur-bg {
+  position: absolute;
+  z-index: inherit;
+  width: 100%;
 }

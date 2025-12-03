@@ -4,18 +4,19 @@ import wiggly from "@/assets/wiggly.png";
 import up_arrow from "@/assets/up-arrow.svg";
 import bow from "@/assets/bow.svg";
 import arrow_right from "@/assets/arrow-right.svg";
+import download from "@/assets/download.svg";
+import blur_bg from "@/assets/blur-bg.png";
 import { about } from "../../utils/content.js";
 
 const About = () => {
   return (
     <section className="about">
+      <img src={blur_bg} alt="" className="blur-bg" />
+      {/* correct blur size */}
       <div className="shape-bg">
         <div className="experience">
           <p className="exp-years">22+</p>
-          <br />
-          <span>
-            Years Of <br /> Experience
-          </span>
+          <span>Years Of Experience</span>
         </div>
         <img src={wiggly} alt="" className="wiggly-frame" />
         <div className="up-arrow">
@@ -36,8 +37,8 @@ const About = () => {
             Ideas."
           </h2>
           <p>
-            "I specialize in interface, digital product & user experience
-            design, focusing on building products, brands, and websites."
+            "I Specialize In Interface, Digital Product & User Experience
+            Design, Focusing On Building Products, Brands, And Websites."
           </p>
         </div>
 
@@ -50,7 +51,12 @@ const About = () => {
           ))}
         </ul>
 
-        <button className="download-btn">Download CV</button>
+        <button className="download-btn">
+          <span>
+            <img src={download} alt="" />
+          </span>
+          Download CV
+        </button>
       </div>
     </section>
   );

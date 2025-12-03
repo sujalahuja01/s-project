@@ -39,9 +39,9 @@ export const logos = [
 
 export const about = [
   "Avoid These Mistakes",
-  "Your New Venture",
-  "New Fonts",
   " Beyond The Norm",
+  "Your New Venture",
   " Forge Destiny",
+  "New Fonts",
   "Dare To Be Different",
 ];
