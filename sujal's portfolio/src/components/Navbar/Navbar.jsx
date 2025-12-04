@@ -1,6 +1,7 @@
 import { useState } from "react";
 import "./Navbar.css";
 import menu from "@/assets/menu-white.svg";
+import close from "@/assets/close.svg";
 import logo from "@/assets/logo.svg";
 import tele from "@/assets/telephone.svg";
 
@@ -46,7 +47,6 @@ export default function Navbar() {
           <img src={logo} alt="logo" />
         </div>
 
-        {/* Desktop nav */}
         <div className="desktop-nav">
           <Navigation />
         </div>
@@ -58,21 +58,18 @@ export default function Navbar() {
           </button>
         </div>
 
-        {/* Hamburger */}
         <button className="hamburger" onClick={() => setOpen(!open)}>
-          <img src={open ? menu : menu} alt="menu" />
+          <img src={open ? close : menu} alt="menu" />
         </button>
       </nav>
 
-      {/* Mobile menu */}
       {open && (
-        <div
-          className="mobile-menu show"
-          initial={{ opacity: 0, x: -20 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.4 }}
-        >
+        <div className="mobile-menu show">
           <Navigation onClick={() => setOpen(false)} />
+          <button className="mobile-chat-btn">
+            <img src={tele} alt="call button" className="tele-img" />
+            <span>Let’s Talk</span>
+          </button>
         </div>
       )}
     </header>

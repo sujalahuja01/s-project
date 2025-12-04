@@ -28,18 +28,15 @@
 }
 .tilte-1 {
   top: 0;
-  transform: rotate(1deg); /* tilt down right */
+  transform: rotate(1deg);
   transform-origin: center;
 }
 
 .tilte-2 {
   bottom: 0;
-  transform: rotate(-1deg); /* tilt down left */
+  transform: rotate(-1deg);
   transform-origin: center;
 }
-/* =====================================================
-   DESKTOP (1200px and up)
-   ===================================================== */
 @media (min-width: 1200px) {
   .gradient-bg {
     padding: 28px clamp(40px, 12vw, 170px);
@@ -47,7 +44,7 @@
   }
 
   .logos img {
-    max-height: 50px; /* slightly reduced so they never squeeze */
+    max-height: 50px;
   }
 
   .logos {
@@ -55,9 +52,6 @@
   }
 }
 
-/* =====================================================
-   LAPTOP (992px – 1199px)
-   ===================================================== */
 @media (max-width: 1199px) and (min-width: 992px) {
   .gradient-bg {
     padding: clamp(12px, 1.8vw, 18px) clamp(20px, 5vw, 60px);
@@ -71,7 +65,7 @@
   }
 
   .logos img {
-    height: clamp(22px, 3vw, 32px); /* MUCH smaller */
+    height: clamp(22px, 3vw, 32px);
     width: auto;
   }
   .tilte-1,
@@ -80,9 +74,6 @@
   }
 }
 
-/* =====================================================
-   TABLET (768px – 991px)
-   ===================================================== */
 @media (max-width: 991px) and (min-width: 768px) {
   .gradient-bg {
     padding: clamp(10px, 2vw, 16px) clamp(15px, 4vw, 40px);
@@ -96,7 +87,7 @@
   }
 
   .logos img {
-    height: clamp(18px, 4vw, 26px); /* smaller & smooth */
+    height: clamp(18px, 4vw, 26px);
     width: auto;
   }
 
@@ -106,9 +97,6 @@
   }
 }
 
-/* =====================================================
-   MOBILE (up to 767px)
-   ===================================================== */
 @media (max-width: 767px) {
   .gradient-bg {
     padding: clamp(8px, 4vw, 14px) clamp(12px, 5vw, 25px);
@@ -123,7 +111,7 @@
   }
 
   .logos img {
-    height: clamp(14px, 5vw, 20px); /* much smaller */
+    height: clamp(14px, 5vw, 20px);
     width: auto;
   }
 

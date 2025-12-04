@@ -1,8 +1,6 @@
-/* NAVBAR WRAPPER */
 .navbar {
-  padding: 20px 10px 0 10px;
-
   position: fixed;
+  padding: 20px 10px 0 10px;
   width: 100%;
   z-index: 50;
   backdrop-filter: blur(12px);
@@ -31,7 +29,6 @@
   padding: 14.5px 0;
 }
 
-/* INNER CONTAINER */
 .nav-inner {
   max-width: 1320px;
   margin: 0 auto;
@@ -44,7 +41,6 @@
   color: var(--text-white);
 }
 
-/* DESKTOP NAVIGATION */
 .desktop-nav {
   display: none;
 }
@@ -72,7 +68,6 @@
   color: inherit;
 }
 
-/* HAMBURGER BUTTON */
 .hamburger {
   display: flex;
   cursor: pointer;
@@ -85,7 +80,6 @@
   height: 26px;
 }
 
-/* MOBILE MENU */
 .mobile-menu {
   display: none;
   width: 100%;
@@ -97,6 +91,20 @@
   transition: all 0.4s ease-in-out;
 }
 
+.mobile-chat-btn {
+  margin: 20px auto 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 175px;
+  height: 54px;
+  background-color: var(--brand-orange);
+  color: white;
+  border: none;
+  border-radius: 2rem;
+  font-size: 18px;
+  gap: 8px;
+}
 .mobile-menu.show {
   display: block;
 }
@@ -106,58 +114,83 @@
   gap: 18px;
 }
 
-/* ---------------------------
-   RESPONSIVE BREAKPOINTS
---------------------------- */
+@media (min-width: 1024px) {
+  .desktop-nav {
+    display: flex;
+  }
 
-@media (min-width: 768px) {
+  .hamburger {
+    display: none;
+  }
+}
+@media (min-width: 992px) {
   .chat-btn {
     display: flex;
   }
+}
 
-  /* .nav-inner {
-    padding: 0 10px;
-  } */
-
+@media (max-width: 1199px) and (min-width: 992px) {
   .desktop-nav {
     display: flex;
+    gap: 45px;
   }
 
   .hamburger {
     display: none;
   }
 
-  .mobile-menu {
-    display: none !important;
-  }
-}
-
-@media (min-width: 1024px) {
-  /* .nav-inner {
-    padding: 0 20px;
-  } */
-
-  .desktop-nav {
-    display: flex;
-  }
-
-  .hamburger {
+  .mobile-chat-btn {
     display: none;
   }
 }
+@media (max-width: 991px) and (min-width: 768px) {
+  .desktop-nav {
+    display: none;
+  }
 
-/* Small devices (portrait tablets and large phones, 600px and up) */
-@media only screen and (min-width: 600px) {
+  .hamburger {
+    display: block;
+  }
+
+  .chat-btn {
+    display: none;
+  }
+
+  .mobile-chat-btn {
+    display: flex;
+  }
+}
+@media (max-width: 767px) {
+  .desktop-nav {
+    display: none;
+  }
+
+  .hamburger {
+    display: block;
+  }
+
+  .chat-btn {
+    display: none;
+  }
+
+  .nav-ul {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .mobile-chat-btn {
+    display: flex;
+  }
 }
 
-/* Medium devices (landscape tablets, 768px and up) */
-@media only screen and (min-width: 768px) {
-}
+@media (max-width: 575px) {
+  .nav-ul {
+    gap: 16px;
+  }
 
-/* Large devices (laptops/desktops, 992px and up) */
-@media only screen and (min-width: 992px) {
-}
-
-/* Extra large devices (large laptops and desktops, 1200px and up) */
-@media only screen and (min-width: 1200px) {
+  .mobile-chat-btn {
+    width: 160px;
+    height: 50px;
+    font-size: 16px;
+  }
 }
