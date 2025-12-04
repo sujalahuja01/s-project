@@ -3,6 +3,8 @@ import Hero from "../../components/Hero/Hero.jsx";
 import Logos from "../../components/Logos/Logos.jsx";
 import About from "../../components/About/About.jsx";
 import Blog from "../../components/Blog/Blog.jsx";
+import Contact from "../../components/Contact/Contact.jsx";
+import Testimonial from "../../components/Testimonials/Testimonials.jsx";
 
 const HomePage = () => {
   return (
@@ -12,7 +14,9 @@ const HomePage = () => {
         <Hero />
         <Logos />
         <About />
-        {/* <Blog /> */}
+        <Blog />
+        {/* <Contact /> */}
+        <Testimonial />
       </main>
     </>
   );
