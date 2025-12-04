@@ -1,31 +1,29 @@
-/* MAIN SECTION */
 .blog-section {
   width: 100%;
-  padding: 120px 16px;
   display: flex;
   justify-content: center;
-  color: var(--text-white);
+  padding: 0 16px;
+  position: relative;
+  margin-top: 200px;
 }
 
 .blog-container {
   width: 1320px;
   max-width: 100%;
-  display: flex;
-  flex-direction: column;
-  gap: 60px;
+  margin: 0 auto;
 }
 
-/* TOP SECTION */
 .blog-top {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
+  gap: 40px;
+  margin-bottom: 60px;
 }
 
 .blog-title h2 {
   font-size: 48px;
-  font-weight: 700;
-  line-height: 1.2;
+  line-height: 1.1;
 }
 
 .blog-title span {
@@ -33,83 +31,206 @@
 }
 
 .blog-desc {
-  max-width: 500px;
-  text-align: right;
+  max-width: 540px;
 }
 
 .blog-desc p {
-  margin-bottom: 20px;
-  line-height: 26px;
   font-size: 16px;
+  line-height: 1.6;
+  margin-bottom: 20px;
 }
 
 .blog-view-btn {
-  padding: 10px 24px;
-  border: 2px solid var(--brand-orange);
   background: none;
-  border-radius: 25px;
+  border: 1px solid var(--brand-orange);
   color: var(--brand-orange);
+  padding: 12px 28px;
+  border-radius: 24px;
   font-size: 16px;
   cursor: pointer;
 }
 
-/* BOTTOM GRID */
 .blog-bottom {
   display: flex;
+  justify-content: space-between;
   gap: 40px;
+  align-items: stretch;
 }
 
 .blog-left {
-  flex: 1;
+  flex: 1.2;
 }
 
-.blog-right {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  gap: 30px;
-}
-
-/* CARD STYLE */
 .blog-card {
-  background: rgba(255, 255, 255, 0.05);
+  background: rgba(255, 255, 255, 0.08);
   border-radius: 20px;
   overflow: hidden;
-  border: 1px solid rgba(255, 255, 255, 0.12);
-  display: flex;
-  flex-direction: column;
 }
 
 .blog-card-img {
   width: 100%;
+  height: auto;
   display: block;
 }
 
 .blog-card-lower {
-  background: rgba(0, 0, 0, 0.5);
-  padding: 18px 20px;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 16px 20px;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
 .blog-card-text h5 {
+  opacity: 0.7;
   font-size: 14px;
-  color: var(--brand-orange);
-  margin-bottom: 4px;
 }
 
 .blog-card-text p {
   font-size: 16px;
-  font-weight: 600;
+  margin-top: 4px;
 }
 
-/* BLUR BACKGROUND */
+.blog-right {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+.right-card {
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 20px;
+}
 .blog-blur {
   position: absolute;
   width: 100%;
-  left: 0;
-  top: 0;
+  max-width: 100vw;
   pointer-events: none;
   z-index: -1;
+  height: 100vh;
+  object-fit: cover;
+  overflow: hidden;
+}
+
+@media (max-width: 1199px) and (min-width: 992px) {
+  .blog-container {
+    width: 90%;
+  }
+
+  .blog-title h2 {
+    font-size: 42px;
+  }
+
+  .blog-desc p {
+    font-size: 15px;
+  }
+
+  .blog-top {
+    gap: 30px;
+  }
+}
+
+@media (max-width: 991px) and (min-width: 768px) {
+  .blog-container {
+    width: 90%;
+  }
+
+  .blog-top {
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    gap: 30px;
+  }
+
+  .blog-desc {
+    max-width: 700px;
+  }
+
+  .blog-bottom {
+    flex-direction: column;
+    gap: 40px;
+    align-items: center;
+  }
+
+  .blog-left,
+  .blog-right {
+    width: 100%;
+  }
+}
+
+@media (max-width: 767px) {
+  .blog-section {
+    padding: 0 10px;
+    margin-top: 100px;
+  }
+
+  .blog-top {
+    flex-direction: column;
+    text-align: center;
+    gap: 20px;
+  }
+
+  .blog-title h2 {
+    font-size: 32px;
+  }
+
+  .blog-desc p {
+    font-size: 15px;
+  }
+
+  .blog-bottom {
+    flex-direction: column;
+    gap: 32px;
+  }
+
+  .blog-left,
+  .blog-right {
+    width: 100%;
+  }
+
+  .blog-card-lower {
+    padding: 14px 16px;
+  }
+
+  .blog-card-text p {
+    font-size: 15px;
+  }
+  .blog-top,
+  .blog-title,
+  .blog-desc,
+  .blog-desc p {
+    text-align: center !important;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@media (max-width: 575px) {
+  .blog-title h2 {
+    font-size: 26px;
+    line-height: 1.25;
+  }
+
+  .blog-desc p {
+    font-size: 14px;
+  }
+
+  .blog-view-btn {
+    font-size: 14px;
+    padding: 10px 22px;
+  }
+
+  .blog-card-lower {
+    padding: 12px 14px;
+  }
+
+  .blog-card-text p {
+    font-size: 14px;
+  }
+
+  .blog-bottom {
+    gap: 28px;
+  }
 }

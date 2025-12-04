@@ -1,123 +1,97 @@
-import React, { useState, useRef, useEffect } from "react";
+import React, { useState, useRef } from "react";
 import "./Testimonials.css";
-import leftArrow from "@/assets/left-arrow.svg";
-import rightArrow from "@/assets/right-arrow.svg";
 import quote from "@/assets/quote.svg";
+import left_arrow from "@/assets/left-arrow.svg";
+import right_arrow from "@/assets/right-arrow.svg";
 
-import { blogs } from "../../utils/content.js"; // uses your blogs array
+import { blogs } from "../../utils/content.js"; //
 
-export default function Testimonial() {
+const Testimonial = () => {
   const [active, setActive] = useState(0);
   const touchStartX = useRef(null);
-  const cardRefs = useRef([]);
 
-  // ensure ref array length matches blogs
-  cardRefs.current = [];
-  const setCardRef = (el) => {
-    if (el) cardRefs.current.push(el);
+  const nextSlide = () => {
+    setActive((prev) => (prev + 1) % blogs.length);
   };
 
-  // when active changes, scroll the active card into center view
-  useEffect(() => {
-    const el = cardRefs.current[0]; // we render rotated order below; index 0 is active
-    if (el && el.scrollIntoView) {
-      el.scrollIntoView({
-        behavior: "smooth",
-        inline: "center",
-        block: "nearest",
-      });
-    }
-  }, [active]);
+  const prevSlide = () => {
+    setActive((prev) => (prev - 1 + blogs.length) % blogs.length);
+  };
 
-  const nextSlide = () => setActive((s) => (s + 1) % blogs.length);
-  const prevSlide = () =>
-    setActive((s) => (s - 1 + blogs.length) % blogs.length);
+  const handleTouchStart = (e) => {
+    touchStartX.current = e.touches[0].clientX;
+  };
 
-  // Touch handlers for mobile
-  const handleTouchStart = (e) => (touchStartX.current = e.touches[0].clientX);
   const handleTouchEnd = (e) => {
     const endX = e.changedTouches[0].clientX;
-    if (touchStartX.current - endX > 40) nextSlide();
-    if (endX - touchStartX.current > 40) prevSlide();
+    if (touchStartX.current - endX > 50) nextSlide();
+    if (endX - touchStartX.current > 50) prevSlide();
   };
-
-  // Build rotated display order so active is first (i === 0)
-  const displayOrder = blogs.map((_, i) => blogs[(active + i) % blogs.length]);
 
   return (
     <section className="testi">
       <div className="testi-container">
-        <p className="testi-label">Testimonial</p>
+        <p className="testi-label">Testimonial 𓆩♡𓆪</p>
+
         <h2 className="testi-title">
           What My <span>Clients</span> Say
         </h2>
 
         <div className="testi-content">
-          {/* TEXT — stays above on small screens */}
           <div className="testi-left">
             <img src={quote} alt="" className="testi-quote" />
+
             <h4 className="testi-name">Leslie Alexander</h4>
+
             <div className="testi-stars">★★★★★</div>
+
             <p className="testi-desc">{blogs[active].description}</p>
+
+            <div className="testi-nav">
+              <button className="testi-btn" onClick={prevSlide}>
+                <img src={left_arrow} alt="prev" />
+              </button>
+
+              <button className="testi-btn" onClick={nextSlide}>
+                <img src={right_arrow} alt="next" />
+              </button>
+            </div>
+
+            <div className="testi-dots">
+              {blogs.map((_, i) => (
+                <span
+                  key={i}
+                  className={`testi-dot ${i === active ? "active" : ""}`}
+                  onClick={() => setActive(i)}
+                ></span>
+              ))}
+            </div>
           </div>
 
-          {/* CAROUSEL */}
           <div
             className="testi-right"
             onTouchStart={handleTouchStart}
             onTouchEnd={handleTouchEnd}
           >
-            {displayOrder.map((item, i) => (
-              <div
-                key={i}
-                ref={setCardRef}
-                className={`testi-card ${
-                  i === 0 ? "active-card" : "small-card"
-                }`}
-                aria-hidden={i === 0 ? "false" : "true"}
-              >
-                {/* keep image as provided (no width/height forced) */}
+            {blogs.map((blog, i) => {
+              const index = (i + active) % blogs.length;
+
+              return (
                 <img
-                  src={item.img}
-                  alt={`slide-${i}`}
-                  className="testi-card-img"
+                  key={i}
+                  src={blogs[index].img}
+                  className={`testi-card ${
+                    i === 0 ? "active-card" : "small-card"
+                  }`}
+                  alt=""
                 />
-              </div>
-            ))}
-          </div>
-
-          {/* CONTROLS (below images on mobile; to the right on desktop via CSS order) */}
-          <div className="testi-controls">
-            <div className="testi-nav">
-              <button
-                className="testi-btn"
-                onClick={prevSlide}
-                aria-label="previous"
-              >
-                <img src={leftArrow} alt="left" />
-              </button>
-              <button
-                className="testi-btn"
-                onClick={nextSlide}
-                aria-label="next"
-              >
-                <img src={rightArrow} alt="right" />
-              </button>
-            </div>
-
-            <div className="testi-dots">
-              {blogs.map((_, idx) => (
-                <button
-                  key={idx}
-                  className={`testi-dot ${idx === active ? "active" : ""}`}
-                  onClick={() => setActive(idx)}
-                  aria-label={`go to slide ${idx + 1}`}
-                />
-              ))}
-            </div>
+              );
+            })}
           </div>
         </div>
       </div>
     </section>
   );
-}
+};
+
+export default Testimonial;

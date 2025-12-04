@@ -1,6 +1,5 @@
 import React from "react";
 import "./Contact.css";
-// replace these placeholders with your actual icons/assets or inline SVGs
 import pinIcon from "@/assets/pin.svg";
 import mailIcon from "@/assets/mail.svg";
 import phoneIcon from "@/assets/phone.svg";
@@ -14,7 +13,6 @@ export default function Contact() {
   return (
     <section className="contact-section" id="contact">
       <div className="contact-container">
-        {/* LEFT SIDE */}
         <aside className="contact-left">
           <h2 className="contact-title">
             Contact <span>Us</span>
@@ -80,7 +78,6 @@ export default function Contact() {
           </div>
         </aside>
 
-        {/* RIGHT SIDE */}
         <main className="contact-right">
           <form className="contact-form">
             <div className="contact-form-head">

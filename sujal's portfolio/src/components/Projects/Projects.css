@@ -1,0 +1,159 @@
+.proj {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 120px;
+  padding-inline: 16px;
+}
+
+.proj-container {
+  max-width: 100%;
+  text-align: center;
+}
+
+.proj-label {
+  color: var(--brand-orange);
+  font-size: 16px;
+  margin-bottom: 8px;
+}
+
+.proj-title {
+  font-size: 48px;
+  font-weight: 700;
+}
+.proj-title span {
+  color: var(--brand-orange);
+}
+
+.proj-categories {
+  margin-top: 30px;
+  display: flex;
+  gap: 24px;
+  justify-content: center;
+}
+
+.proj-tab {
+  background: none;
+  border: 1px solid transparent;
+  padding: 8px 22px;
+  border-radius: 24px;
+  color: var(--text-white);
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.proj-tab.active {
+  border-color: var(--brand-orange);
+  color: var(--brand-orange);
+}
+
+.proj-wrapper {
+  position: relative;
+  margin-top: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.proj-slider {
+  display: flex;
+  gap: 28px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  padding: 20px 0;
+  scrollbar-width: none;
+  width: 100%;
+  padding-bottom: 12px;
+  z-index: 1;
+}
+
+.proj-slider::-webkit-scrollbar {
+  display: none;
+}
+.proj-card {
+  min-width: 350px;
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 20px;
+  padding-bottom: 20px;
+  flex-shrink: 0;
+  scroll-snap-align: center;
+}
+
+.proj-img {
+  width: 100%;
+  height: 260px;
+  background: #eee;
+  border-radius: 20px;
+}
+
+.proj-card h4 {
+  margin-top: 14px;
+  font-size: 18px;
+}
+
+.proj-card p {
+  font-size: 14px;
+  opacity: 0.7;
+}
+.proj-arrows {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 12px;
+  z-index: 20;
+  pointer-events: auto;
+}
+
+.proj-arrow {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.18s ease;
+}
+.proj-arrow img {
+  width: 35px;
+  display: block;
+}
+.proj-arrow:active {
+  transform: scale(0.98);
+}
+.proj-arrow:hover {
+  transform: scale(1.1);
+}
+.proj-arrow:active {
+  transform: scale(0.95);
+}
+
+@media (max-width: 991px) {
+  .proj-title {
+    font-size: 38px;
+  }
+
+  .proj-card {
+    min-width: 300px;
+  }
+}
+
+@media (max-width: 767px) {
+  .proj-arrows {
+    gap: 30px;
+    margin-top: 10px;
+  }
+
+  .proj-arrow img {
+    width: 30px;
+  }
+}
+@media (max-width: 575px) {
+  .proj-title {
+    font-size: 26px;
+  }
+
+  .proj-card {
+    min-width: 85%;
+  }
+}

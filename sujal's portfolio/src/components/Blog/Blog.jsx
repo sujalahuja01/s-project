@@ -9,7 +9,6 @@ const Blog = () => {
   return (
     <section className="blog-section">
       <div className="blog-container">
-        {/* TOP SECTION */}
         <div className="blog-top">
           <div className="blog-title">
             <h2>
@@ -28,9 +27,7 @@ const Blog = () => {
           </div>
         </div>
 
-        {/* BOTTOM SECTION */}
         <div className="blog-bottom">
-          {/* LEFT BIG CARD */}
           <div className="blog-left">
             <div className="blog-card">
               <img src={left_img} alt="" className="blog-card-img" />
@@ -45,7 +42,6 @@ const Blog = () => {
             </div>
           </div>
 
-          {/* RIGHT TWO CARDS */}
           <div className="blog-right">
             <div className="blog-card right-card">
               <img src={right_img} alt="" className="blog-card-img" />
@@ -74,8 +70,7 @@ const Blog = () => {
         </div>
       </div>
 
-      {/* Blur background */}
-      {/* <img src={blog_blur} alt="" className="blog-blur" /> */}
+      <img src={blog_blur} alt="" className="blog-blur" />
     </section>
   );
 };
