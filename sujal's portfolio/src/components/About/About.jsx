@@ -10,54 +10,60 @@ import { about } from "../../utils/content.js";
 
 const About = () => {
   return (
-    <section className="about">
-      <img src={blur_bg} alt="" className="blur-bg" />
-      {/* correct blur size */}
-      <div className="shape-bg">
-        <div className="experience">
-          <p className="exp-years">22+</p>
-          <span>Years Of Experience</span>
-        </div>
-        <img src={wiggly} alt="" className="wiggly-frame" />
-        <div className="up-arrow">
-          <img src={up_arrow} alt="" />
-        </div>
-      </div>
+    <section className="about" id="about">
+      <div className="about-container">
+        <div className="about-left">
+          <div className="left-cluster">
+            <div className="experience">
+              <p className="exp-years">22+</p>
+              <span>Years Of Experience</span>
+            </div>
 
-      <div className="right">
-        <div className="right-content">
-          <h3 className="about-title">
-            About Us
+            <img src={wiggly} alt="" className="wiggly-frame" />
+
+            <div className="up-arrow">
+              <img src={up_arrow} alt="" />
+            </div>
+          </div>
+        </div>
+
+        <div className="about-right">
+          <div className="about-content">
+            <h3 className="about-title">
+              About Us
+              <span>
+                <img src={bow} alt="" />
+              </span>
+            </h3>
+            <h2 className="about-desc">
+              "Crafting Enjoyable <span>Digital</span> Solutions From Business
+              Ideas."
+            </h2>
+            <p>
+              "I Specialize In Interface, Digital Product & User Experience
+              Design, Focusing On Building Products, Brands, And Websites."
+            </p>
+          </div>
+          <div className="points">
+            <ul>
+              {about.map((item, index) => (
+                <li key={index}>
+                  <img src={arrow_right} alt="" />
+                  {item}
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          <button className="download-btn">
             <span>
-              <img src={bow} alt="" />
+              <img src={download} alt="" />
             </span>
-          </h3>
-          <h2 className="about-desc">
-            "Crafting Enjoyable <span>Digital</span> Solutions From Business
-            Ideas."
-          </h2>
-          <p>
-            "I Specialize In Interface, Digital Product & User Experience
-            Design, Focusing On Building Products, Brands, And Websites."
-          </p>
+            Download CV
+          </button>
         </div>
-
-        <ul className="points">
-          {about.map((item, index) => (
-            <li key={index}>
-              <img src={arrow_right} alt="" />
-              {item}
-            </li>
-          ))}
-        </ul>
-
-        <button className="download-btn">
-          <span>
-            <img src={download} alt="" />
-          </span>
-          Download CV
-        </button>
       </div>
+      <img src={blur_bg} alt="" className="blur-bg" />
     </section>
   );
 };

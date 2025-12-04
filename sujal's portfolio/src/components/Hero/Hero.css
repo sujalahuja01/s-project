@@ -1,51 +1,50 @@
 .hero {
-  /* position: relative; */
-  min-height: 960px;
-  max-width: 1320px;
   width: 100%;
+  display: flex;
+  justify-content: center;
 }
 
-.hero-grid {
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: -1;
-  object-fit: cover;
-  pointer-events: none;
+.hero-container {
+  position: relative;
+  width: 1320px;
+  max-width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 180px;
+  margin-bottom: 80px;
 }
 
 .hero-content {
-  position: absolute;
-  top: 300px;
-  left: 300px;
   z-index: 5;
 }
 
-.intro-text {
+.hero-heading {
   font-size: 76px;
   font-weight: 800;
 }
-.aposs-top {
+.hero-aposs-top {
   color: var(--brand-orange);
 }
-.aposs-wrapper {
+.hero-aposs-wrapper {
   position: relative;
   display: inline-block;
   width: 25px;
 }
 
-.aposs-base {
+.hero-aposs-base {
   position: absolute;
   top: 21px;
   right: 5px;
 }
-.wave-icon {
+.hero-wave-icon {
   margin-left: 25px;
 }
-.desc-text {
+.hero-desc-text {
   font-size: 22px;
   font-weight: 400;
   margin-top: 39px;
+  line-height: 28px;
 }
 .hero-btn {
   background: none;
@@ -53,6 +52,7 @@
   padding: 17px 32px;
   font-weight: 400;
   font-size: 20px;
+  font-family: "outfit";
   border: none;
   border-radius: 2rem;
   border: 2px solid var(--brand-orange);
@@ -61,9 +61,139 @@
 .hero-btn span {
   margin-left: 10px;
 }
-/* .hero-img {
+.hero-grid,
+.hero-tri-blur,
+.hero-blur-bg {
   position: absolute;
-  top: 185px;
-  right: 331px;
-  margin-bottom: 80px;
-} */
+  top: 0;
+  left: 0;
+  width: 100%;
+  max-width: 100vw;
+  pointer-events: none;
+  z-index: -1;
+  height: 100vh;
+}
+/* ============================
+   DESKTOP (1200px and up)
+   ============================ */
+@media (min-width: 1200px) {
+  .hero-heading {
+    font-size: 76px;
+  }
+  .hero-container {
+    width: 1320px;
+  }
+  .hero-aposs-wrapper {
+    width: 25px;
+  }
+  .hero-aposs-base {
+    top: 21px;
+    right: 5px;
+  }
+}
+
+/* ============================
+   LAPTOP (992px – 1199px)
+   ============================ */
+@media (max-width: 1199px) and (min-width: 992px) {
+  .hero-container {
+    width: 90%;
+  }
+
+  .hero-heading {
+    font-size: 60px;
+  }
+
+  .hero-desc-text {
+    font-size: 20px;
+  }
+
+  .hero-hero-img {
+    width: 420px;
+  }
+  .hero-aposs-wrapper {
+    width: 21.5px;
+  }
+  .hero-aposs-base {
+    top: 18px;
+    right: 2px;
+  }
+  .hero-aposs-top {
+    font-size: 1.2em;
+  }
+}
+
+/* ============================
+   TABLET (768px – 991px)
+   ============================ */
+/* need changes */
+@media (max-width: 991px) and (min-width: 768px) {
+  .hero-container {
+    flex-direction: column;
+    text-align: center;
+    gap: 50px;
+    width: 90%;
+  }
+
+  .hero-heading {
+    font-size: 50px;
+  }
+
+  .hero-desc-text {
+    font-size: 20px;
+  }
+
+  .hero-hero-img {
+    width: 380px;
+  }
+  .hero-aposs-wrapper {
+    width: 16px;
+  }
+  .hero-aposs-base {
+    top: 12px;
+    right: 3px;
+  }
+  .hero-aposs-top {
+    font-size: 1em;
+  }
+}
+
+/* ============================
+   MOBILE (up to 767px)
+   ============================ */
+@media (max-width: 767px) {
+  .hero-container {
+    flex-direction: column;
+    text-align: center;
+    width: 95%;
+    margin-top: 120px;
+  }
+
+  .hero-heading {
+    font-size: 38px;
+    line-height: 1.2;
+  }
+
+  .hero-desc-text {
+    margin-top: 20px;
+  }
+
+  .hero-btn {
+    font-size: 16px;
+    padding: 14px 24px;
+    margin-bottom: 30px;
+  }
+
+  .hero-hero-img {
+    width: 300px;
+  }
+
+  .hero-aposs-base {
+    top: 9.75px;
+    right: 7.75px;
+    width: 9px;
+  }
+  .hero-aposs-top {
+    font-size: 1em;
+  }
+}

@@ -12,7 +12,7 @@ const HomePage = () => {
         <Hero />
         <Logos />
         <About />
-        <Blog />
+        {/* <Blog /> */}
       </main>
     </>
   );

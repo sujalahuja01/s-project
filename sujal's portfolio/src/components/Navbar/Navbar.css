@@ -1,7 +1,8 @@
 /* NAVBAR WRAPPER */
 .navbar {
+  padding: 20px 10px 0 10px;
+
   position: fixed;
-  inset: 40px 0 auto 0;
   width: 100%;
   z-index: 50;
   backdrop-filter: blur(12px);

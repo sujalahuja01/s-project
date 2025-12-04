@@ -1,17 +1,21 @@
 .about {
-  position: relative; /* needed for absolute shape */
+  width: 100%;
   display: flex;
-  gap: 60px;
-  margin: 0px 0 200px 300px;
+  justify-content: center;
+  margin-top: 200px;
+  overflow-x: hidden;
+}
+.about-container {
+  width: 1320px;
+  max-width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-.about > * {
+.about-left {
   position: relative;
-  z-index: 5; /* content stays above the shape */
-}
-
-.wiggly-frame {
-  position: relative;
+  margin-right: 60px;
 }
 .experience {
   position: absolute;
@@ -19,6 +23,7 @@
   left: 28px;
   width: 113px;
   height: 143px;
+  text-align: center;
 }
 .up-arrow {
   position: absolute;
@@ -61,19 +66,23 @@
   min-width: 0;
 }
 
-.right-content p {
+.about-content p {
   font-size: 20px;
   font-weight: 300;
   line-height: 30px;
   margin-bottom: 50px;
 }
 .points {
+  width: auto;
+}
+.points ul {
   list-style: none;
   padding: 0;
   margin: 0 0 50px;
   display: grid;
-  grid-template-columns: repeat(2, auto);
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   row-gap: 18px;
+  column-gap: 20px;
 }
 
 .points li {
@@ -96,6 +105,7 @@
   border: 2px solid var(--brand-orange);
   font-size: 20px;
   font-weight: 500;
+  font-family: "outfit";
   justify-content: center;
   align-items: center;
 }
@@ -105,6 +115,238 @@
 }
 .blur-bg {
   position: absolute;
-  z-index: inherit;
   width: 100%;
+  max-width: 100vw;
+  pointer-events: none;
+  z-index: -1;
+  height: 100vh;
+  object-fit: cover;
+  overflow: hidden;
+}
+@media (min-width: 1200px) {
+  .about-container {
+    width: 1320px;
+  }
+  .about-left {
+    transform: scale(1);
+    transform-origin: top left;
+  }
+}
+@media (max-width: 1199px) and (min-width: 992px) {
+  .about-container {
+    width: 90%;
+  }
+  .about-left {
+    transform: scale(0.88);
+    transform-origin: top left;
+  }
+
+  /* .about-left img {
+    width: 90%; 
+  } 
+  */
+
+  .experience,
+  .up-arrow {
+    transform: scale(0.9);
+    transform-origin: top left;
+  }
+
+  .about-desc {
+    font-size: 48px;
+    line-height: 1.15;
+  }
+
+  .about-content p {
+    font-size: 18px;
+  }
+}
+@media (max-width: 991px) and (min-width: 768px) {
+  .about {
+    margin-top: 100px;
+  }
+  .about-right {
+    margin-top: -100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .about-container {
+    width: 90%;
+    flex-direction: column;
+    text-align: center;
+    gap: 50px;
+  }
+
+  .about-left {
+    transform: scale(0.8);
+    transform-origin: top center;
+    margin: 0 auto;
+  }
+
+  .experience,
+  .up-arrow {
+    transform: scale(0.75);
+    transform-origin: top center;
+  }
+
+  .about-desc {
+    font-size: 35px;
+  }
+
+  .points ul {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+@media (max-width: 767px) {
+  .about {
+    margin-top: 100px;
+  }
+  .about-right {
+    margin-top: -200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .about-container {
+    width: 95%;
+    flex-direction: column;
+    text-align: center;
+    gap: 40px;
+  }
+
+  .about-left {
+    transform: scale(0.65);
+    transform-origin: top center;
+    margin: 0 auto;
+  }
+  .experience,
+  .up-arrow {
+    transform: scale(0.62);
+    transform-origin: top center;
+  }
+
+  .about-title {
+    font-size: 16px;
+  }
+
+  .about-desc {
+    font-size: 32px;
+    line-height: 1.2;
+  }
+
+  .about-content p {
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  .points {
+    display: flex;
+    justify-content: center;
+    width: max-content;
+    margin: 0 auto;
+  }
+
+  .points ul {
+    grid-template-columns: 1fr;
+    width: max-content;
+    text-align: left;
+  }
+
+  .download-btn {
+    width: 180px;
+    height: 54px;
+    font-size: 16px;
+  }
+}
+@media (max-width: 575px) {
+  .about {
+    margin-top: 80px;
+    width: 100%;
+    overflow-x: hidden;
+  }
+
+  .about-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 32px;
+    width: 100%;
+    padding-inline: 16px;
+    box-sizing: border-box;
+  }
+
+  .about-left {
+    margin: 0 auto;
+    transform: scale(0.75);
+    transform-origin: top center;
+    display: inline-block;
+  }
+
+  .wiggly-frame {
+    display: block;
+    max-width: 320px;
+    width: 100%;
+    height: auto;
+  }
+
+  .experience {
+    transform: scale(0.6);
+    left: 0px;
+  }
+
+  .up-arrow {
+    transform: scale(0.7);
+    top: 310px;
+    right: -15px;
+  }
+
+  .about-right {
+    margin-top: -100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+  }
+  .about-content p {
+    margin-top: 30px;
+  }
+
+  .about-desc {
+    font-size: 26px;
+    line-height: 1.28;
+  }
+
+  .about-title {
+    font-size: 18px;
+  }
+
+  .points ul {
+    width: max-content;
+    margin: 0 auto;
+  }
+
+  .points li {
+    font-size: 20px;
+  }
+
+  .download-btn {
+    width: 150px;
+    height: 48px;
+    font-size: 14px;
+    margin-top: 30px;
+  }
+
+  .blur-bg {
+    max-width: 100%;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
 }

@@ -1,11 +1,9 @@
 .gradient-bg {
   position: relative;
   background: linear-gradient(180deg, #8c01db 0%, #fa614f 183.7%);
-  padding: 25px 150px;
   width: 100%;
   height: 90px;
   overflow: visible;
-  margin-bottom: 200px;
 }
 
 .bg-rectangle {
@@ -38,4 +36,101 @@
   bottom: 0;
   transform: rotate(-1deg); /* tilt down left */
   transform-origin: center;
+}
+/* =====================================================
+   DESKTOP (1200px and up)
+   ===================================================== */
+@media (min-width: 1200px) {
+  .gradient-bg {
+    padding: 28px clamp(40px, 12vw, 170px);
+    height: 95px;
+  }
+
+  .logos img {
+    max-height: 50px; /* slightly reduced so they never squeeze */
+  }
+
+  .logos {
+    gap: clamp(20px, 2vw, 32px);
+  }
+}
+
+/* =====================================================
+   LAPTOP (992px – 1199px)
+   ===================================================== */
+@media (max-width: 1199px) and (min-width: 992px) {
+  .gradient-bg {
+    padding: clamp(12px, 1.8vw, 18px) clamp(20px, 5vw, 60px);
+    height: auto;
+  }
+
+  .logos {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: clamp(10px, 1.5vw, 18px);
+  }
+
+  .logos img {
+    height: clamp(22px, 3vw, 32px); /* MUCH smaller */
+    width: auto;
+  }
+  .tilte-1,
+  .tilte-2 {
+    height: clamp(45px, 5vw, 70px);
+  }
+}
+
+/* =====================================================
+   TABLET (768px – 991px)
+   ===================================================== */
+@media (max-width: 991px) and (min-width: 768px) {
+  .gradient-bg {
+    padding: clamp(10px, 2vw, 16px) clamp(15px, 4vw, 40px);
+    height: auto;
+  }
+
+  .logos {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: clamp(12px, 2.5vw, 22px);
+  }
+
+  .logos img {
+    height: clamp(18px, 4vw, 26px); /* smaller & smooth */
+    width: auto;
+  }
+
+  .tilte-1,
+  .tilte-2 {
+    height: clamp(35px, 5vw, 60px);
+  }
+}
+
+/* =====================================================
+   MOBILE (up to 767px)
+   ===================================================== */
+@media (max-width: 767px) {
+  .gradient-bg {
+    padding: clamp(8px, 4vw, 14px) clamp(12px, 5vw, 25px);
+    height: auto;
+    margin-bottom: 80px;
+  }
+
+  .logos {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: clamp(10px, 4vw, 18px);
+  }
+
+  .logos img {
+    height: clamp(14px, 5vw, 20px); /* much smaller */
+    width: auto;
+  }
+
+  @media (max-width: 767px) {
+    .tilte-1,
+    .tilte-2 {
+      height: clamp(45px, 18vw, 90px);
+    }
+  }
 }
