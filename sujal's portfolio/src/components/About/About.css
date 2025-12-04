@@ -186,10 +186,14 @@
     margin: 0 auto;
   }
 
-  .experience,
-  .up-arrow {
-    transform: scale(0.75);
+  .experience {
+    transform: scale(1);
     transform-origin: top center;
+  }
+  .up-arrow {
+    transform: scale(1.1);
+    transform-origin: top center;
+    right: 18px;
   }
 
   .about-desc {
@@ -223,10 +227,14 @@
     transform-origin: top center;
     margin: 0 auto;
   }
-  .experience,
-  .up-arrow {
-    transform: scale(0.62);
+  .experience {
+    transform: scale(1);
     transform-origin: top center;
+  }
+  .up-arrow {
+    transform: scale(1.1);
+    transform-origin: top center;
+    right: 18px;
   }
 
   .about-title {

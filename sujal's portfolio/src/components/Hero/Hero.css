@@ -73,9 +73,7 @@
   z-index: -1;
   height: 100vh;
 }
-/* ============================
-   DESKTOP (1200px and up)
-   ============================ */
+
 @media (min-width: 1200px) {
   .hero-heading {
     font-size: 76px;
@@ -92,9 +90,6 @@
   }
 }
 
-/* ============================
-   LAPTOP (992px – 1199px)
-   ============================ */
 @media (max-width: 1199px) and (min-width: 992px) {
   .hero-container {
     width: 90%;
@@ -112,21 +107,17 @@
     width: 420px;
   }
   .hero-aposs-wrapper {
-    width: 21.5px;
+    width: 20.5px;
   }
   .hero-aposs-base {
-    top: 18px;
-    right: 2px;
+    top: 16px;
+    right: 2.5px;
   }
   .hero-aposs-top {
-    font-size: 1.2em;
+    font-size: 1.1em;
   }
 }
 
-/* ============================
-   TABLET (768px – 991px)
-   ============================ */
-/* need changes */
 @media (max-width: 991px) and (min-width: 768px) {
   .hero-container {
     flex-direction: column;
@@ -146,21 +137,16 @@
   .hero-hero-img {
     width: 380px;
   }
-  .hero-aposs-wrapper {
-    width: 16px;
-  }
+
   .hero-aposs-base {
-    top: 12px;
+    top: 14px;
     right: 3px;
   }
   .hero-aposs-top {
-    font-size: 1em;
+    font-size: 1.2em;
   }
 }
 
-/* ============================
-   MOBILE (up to 767px)
-   ============================ */
 @media (max-width: 767px) {
   .hero-container {
     flex-direction: column;
