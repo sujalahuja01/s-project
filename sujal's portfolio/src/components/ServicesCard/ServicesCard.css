@@ -1,5 +1,5 @@
 .service-card {
-  width: 312px;
+  width: 15%;
   height: 408px;
   border: 2px solid var(--primary-white);
   border-radius: 2rem;
@@ -29,4 +29,20 @@
 .service-card-span {
   font-size: 20px;
   font-weight: 300;
+}
+@media (max-width: 575px) {
+  .service-card {
+    min-width: 220px; /* was 300px — shrink */
+    height: auto; /* allow flexible height */
+    padding: 20px 0; /* optional */
+  }
+
+  .service-card-content {
+    padding: 40px 10px; /* reduce spacing */
+  }
+
+  .service-icon {
+    width: 60px; /* smaller icons */
+    height: auto;
+  }
 }

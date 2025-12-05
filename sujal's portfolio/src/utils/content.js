@@ -11,7 +11,6 @@ import wd from "@/assets/web-dev.svg";
 import design from "@/assets/design.svg";
 import testi_main from "@/assets/pp.png";
 import testi_small from "@/assets/testi-small.png";
-import figma from "@/assets/Figma.png";
 
 export const logos = [
   {
@@ -55,19 +54,25 @@ export const about = [
 
 export const blogs = [
   {
+    stars: "★★★★★",
+    name: "Rachel",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ",
+      "Rachel Rachel Rachel Rachel Rachel Rachel Rachel Rachel Rachel Rachel Rachel Rachel Rachel Rachel Rachel Rachel Rachel Rachel Rachel Rachel Rachel Rachel Rachel Rachel Rachel Rachel Rachel Rachel Rachel Rachel ",
     img: testi_main,
   },
   {
+    stars: "★★★★",
+    name: "Monica",
     description:
-      "Lorem smod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ",
+      "Monica Monica Monica Monica Monica Monica Monica Monica Monica Monica Monica Monica Monica Monica Monica Monica Monica Monica Monica Monica Monica Monica Monica  ",
     img: testi_small,
   },
   {
+    stars: "★★★",
+    name: "Phoebe",
     description:
-      "Lorem ipsum But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great ex laboris nisi ut aliquip ",
-    img: figma,
+      "Phoebe Phoebe Phoebe Phoebe Phoebe Phoebe Phoebe Phoebe Phoebe Phoebe Phoebe Phoebe Phoebe Phoebe Phoebe Phoebe Phoebe Phoebe Phoebe Phoebe Phoebe Phoebe Phoebe ",
+    img: testi_small,
   },
 ];
 export const services = [

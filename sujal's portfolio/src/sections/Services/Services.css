@@ -13,7 +13,7 @@
   width: 1320px;
   max-width: 100%;
   text-align: center;
-  position: relative; /* arrows positioned relative to this */
+  padding: 0 0 0 50px;
 }
 
 .expert-title {
@@ -25,14 +25,12 @@
 }
 
 .expert-subtitle {
-  /* opacity: 0.7; */
   max-width: 850px;
   margin: 15px auto 65px;
   line-height: 30px;
   font-size: 20px;
   font-weight: 400;
 }
-/* ------------------ SERVICES SLIDER (FINAL) ------------------ */
 
 .expert-wrapper {
   position: relative;
@@ -41,7 +39,6 @@
   align-items: center;
 }
 
-/* Slider behaves exactly like the Projects slider */
 .expert-slider {
   display: flex;
   gap: 28px;
@@ -56,7 +53,6 @@
   display: none;
 }
 
-/* FIXED card width (just like projects) */
 .service-card {
   min-width: 300px;
   flex-shrink: 0;
@@ -81,17 +77,6 @@
   padding: 0;
 }
 
-.expert-arrow {
-  position: absolute;
-  top: 50%;
-  /* transform: translateY(-50%); */
-  background: none;
-  border: none;
-  cursor: pointer;
-  padding: 0;
-  transition: 0.2s ease;
-}
-
 .expert-arrow img {
   width: 4rem;
   height: 4rem;
@@ -108,13 +93,49 @@
     max-width: 90%;
   }
 }
+
+@media (min-width: 1200px) {
+}
+@media (max-width: 1199px) and (min-width: 992px) {
+}
+@media (max-width: 991px) and (min-width: 768px) {
+  .expert {
+    margin-top: 150px;
+  }
+}
+@media (max-width: 767px) {
+  .expert {
+    margin-top: 100px;
+  }
+}
+
 @media (max-width: 575px) {
   .expert-container h2 {
     font-size: 36px;
     line-height: 1.25;
   }
-
-  .expert-container p {
+  .a .expert-container p {
     font-size: 20px;
+  }
+  .expert-arrow-right {
+    position: absolute;
+    top: 70%;
+    right: -5%;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+  }
+  .expert-arrow-left {
+    position: absolute;
+    top: 70%;
+    left: -5%;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+  }
+  .expert {
+    margin-top: 50px;
   }
 }

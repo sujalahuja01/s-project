@@ -70,40 +70,26 @@
   margin-bottom: 65px;
   height: 100px;
 }
-.testi-blur {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  pointer-events: none;
-  z-index: -1;
-}
-/* ---------------------------------- RIGHT SLIDER ---------------------------------- */
 
 .testi-right {
   display: flex;
   align-items: flex-end;
   gap: 22px;
   overflow: hidden;
-  /* height: 430px;  */
 }
 
-/* wrapper that controls active/inactive height */
 .testi-card-wrapper {
   flex-shrink: 0;
-  width: 240px; /* fixed size (like your design) */
+  width: 240px;
   display: flex;
   justify-content: center;
   transition: all 0.35s ease;
 }
 
-/* big card */
 .active-wrapper {
   height: 100%;
 }
 
-/* small card */
 .inactive-wrapper {
   height: 50%;
   opacity: 0.6;
@@ -111,32 +97,24 @@
 
 .testi-card-img {
   width: 100%;
-  height: 130%;
+  height: 100%;
   border-radius: 22px;
   object-fit: cover;
 }
 
-/* Active card highlighted border */
-.active-wrapper .testi-card-img {
-  border: 3px solid var(--brand-orange);
-}
 .testi-controls {
-  /* margin-top: 30px; */
   display: flex;
   flex-direction: column;
-  /* align-items: center; */
 
-  height: 90px; /* FIXED HEIGHT → prevents shifting */
+  height: 90px;
   justify-content: space-between;
 }
 
-/* arrows row */
 .testi-nav {
   display: flex;
   align-items: center;
   gap: 28px;
 }
-/* ---------------------------------- DOTS + BUTTONS ---------------------------------- */
 
 .testi-btn {
   background: none;
@@ -163,29 +141,36 @@
   transform: scale(1.3);
 }
 
-/* ---------------------------------- BREAKPOINTS ---------------------------------- */
-
-/* Tablet 991px */
-/* Fix left-right layout on desktop */
+@media (max-width: 1330px) {
+  .testi-container {
+    padding: 0 0 0 10px;
+  }
+}
 @media (min-width: 992px) {
+  .testi {
+    margin-top: 180px;
+  }
   .testi-content {
     display: flex;
     align-items: flex-start;
-    gap: 80px; /* stable spacing */
+    gap: 80px;
   }
 
   .testi-left {
-    width: 480px; /* fixed width prevents movement */
+    width: 480px;
     flex-shrink: 0;
   }
 
   .testi-right {
-    flex-grow: 1; /* takes remaining width */
+    flex-grow: 1;
     justify-content: flex-start;
   }
 }
 
 @media (max-width: 991px) {
+  .testi {
+    margin-top: 150px;
+  }
   .testi-content {
     flex-direction: column;
     align-items: center;
@@ -195,13 +180,15 @@
   .testi-right {
     margin-top: 40px;
     justify-content: center;
-    height: auto; /* let height adjust naturally */
+    height: auto;
   }
 
   .testi-card-wrapper {
     width: 180px;
   }
-
+  .testi-desc {
+    margin-bottom: 0;
+  }
   .active-wrapper {
     height: 280px;
   }
@@ -211,18 +198,24 @@
   }
 
   .testi-nav {
+    margin: auto;
     gap: 20px;
   }
   .testi-controls {
     margin-top: 20px;
     height: 70px;
   }
+  .testi-quote {
+    display: none;
+  }
 }
 
-/* Mobile Landscape: 767px */
 @media (max-width: 767px) {
+  .testi {
+    margin-top: 100px;
+  }
   .testi-title {
-    font-size: 38px;
+    font-size: 40px;
   }
 
   .testi-card-wrapper {
@@ -238,10 +231,12 @@
   }
 }
 
-/* Mobile Portrait: 575px */
 @media (max-width: 575px) {
+  .testi {
+    margin-top: 50px;
+  }
   .testi-title {
-    font-size: 30px;
+    font-size: 35px;
   }
 
   .testi-card-wrapper {
@@ -257,8 +252,10 @@
   }
 }
 
-/* Extra small devices: 420px */
 @media (max-width: 420px) {
+  .testi {
+    margin-top: 50px;
+  }
   .testi-card-wrapper {
     width: 110px;
   }
@@ -274,9 +271,12 @@
   .testi-quote {
     width: 60px;
   }
+  .testi-title {
+    font-size: 35px;
+    margin-bottom: 30px;
+  }
 }
 
-/* Ultra small (smartphones): 360px */
 @media (max-width: 360px) {
   .testi-card-wrapper {
     width: 100px;

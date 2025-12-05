@@ -25,7 +25,7 @@ function Navigation({ onClick }) {
       </li>
       <li className="nav-li">
         <a href="#project" className="nav-link" onClick={onClick}>
-          Project
+          Projects
         </a>
       </li>
       <li className="nav-li">

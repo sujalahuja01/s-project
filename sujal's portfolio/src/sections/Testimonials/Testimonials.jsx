@@ -3,10 +3,8 @@ import "./Testimonials.css";
 import quote from "@/assets/testi-quote.svg";
 import left_arrow from "@/assets/left-arrow.svg";
 import right_arrow from "@/assets/right-arrow.svg";
-
 import { blogs } from "../../utils/content.js"; //
 import bow from "@/assets/bow.svg";
-import testi_blur from "@/assets/testi-blur.png";
 
 const Testimonial = () => {
   const [active, setActive] = useState(0);
@@ -48,9 +46,9 @@ const Testimonial = () => {
           <div className="testi-left">
             <img src={quote} alt="" className="testi-quote" />
 
-            <h4 className="testi-name">Leslie Alexander</h4>
+            <h4 className="testi-name">{blogs[active].name}</h4>
 
-            <div className="testi-stars">★★★★★</div>
+            <div className="testi-stars">{blogs[active].stars}</div>
 
             <p className="testi-desc">{blogs[active].description}</p>
 
@@ -81,7 +79,6 @@ const Testimonial = () => {
             onTouchEnd={handleTouchEnd}
           >
             {blogs.map((_, i) => {
-              // circular indexing for infinite loop
               const index = (active + i) % blogs.length;
 
               return (
@@ -101,7 +98,6 @@ const Testimonial = () => {
             })}
           </div>
         </div>
-        {/* <img src={testi_blur} alt="" className="testi-blur" /> */}
       </div>
     </section>
   );

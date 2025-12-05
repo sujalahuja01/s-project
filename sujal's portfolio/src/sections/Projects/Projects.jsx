@@ -9,7 +9,6 @@ import bow from "@/assets/bow.svg";
 const Projects = () => {
   const sliderRef = useRef(null);
 
-  // ⭐ NEW: Track active category index
   const [activeCat, setActiveCat] = useState(0);
 
   const scrollLeft = () => {
@@ -24,7 +23,6 @@ const Projects = () => {
     sliderRef.current.scrollBy({ left: amount, behavior: "smooth" });
   };
 
-  // ⭐ NEW: Detect which card is centered
   useEffect(() => {
     const slider = sliderRef.current;
     if (!slider) return;
@@ -48,7 +46,6 @@ const Projects = () => {
         }
       });
 
-      // Update active category based on card index
       setActiveCat(closestIndex);
     };
 
@@ -57,7 +54,7 @@ const Projects = () => {
   }, []);
 
   return (
-    <section className="proj">
+    <section className="proj" id="project">
       <div className="proj-container">
         <p className="proj-label">
           My Portfolio

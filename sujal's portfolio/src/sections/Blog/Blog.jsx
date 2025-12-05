@@ -7,7 +7,7 @@ import card_arrow from "@/assets/card-arrow.svg";
 
 const Blog = () => {
   return (
-    <section className="blog-section">
+    <section className="blog-section" id="blog">
       <div className="blog-container">
         <div className="blog-top">
           <div className="blog-title">
@@ -69,8 +69,6 @@ const Blog = () => {
           </div>
         </div>
       </div>
-
-      {/* <img src={blog_blur} alt="" className="blog-blur" /> */}
     </section>
   );
 };

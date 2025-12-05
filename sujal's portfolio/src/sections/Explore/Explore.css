@@ -79,6 +79,9 @@
 }
 
 @media (max-width: 991px) and (min-width: 768px) {
+  .cta {
+    margin-top: 150px;
+  }
   .cta-container {
     width: 90%;
     flex-direction: column;
@@ -104,6 +107,9 @@
 }
 
 @media (max-width: 767px) {
+  .cta {
+    margin-top: 100px;
+  }
   .cta-container {
     width: 95%;
     flex-direction: column;
@@ -130,6 +136,9 @@
 }
 
 @media (max-width: 575px) {
+  .cta {
+    margin-top: 50px;
+  }
   .cta-container {
     width: 100%;
     padding: 32px 20px;
