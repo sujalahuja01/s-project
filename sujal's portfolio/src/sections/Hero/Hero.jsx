@@ -41,11 +41,11 @@ const Header = () => {
         </div>
         <div className="hero-right">
           <img src={image} alt="" className="hero-hero-img" />
-        </div>
+        </div>{" "}
+        {/* <img src={grid} alt="" className="hero-grid" />
+        <img src={tri_blur} alt="" className="hero-tri-blur" />
+        <img src={hero_blur} alt="" className="hero-blur-bg" /> */}
       </div>
-      <img src={grid} alt="" className="hero-grid" />
-      <img src={tri_blur} alt="" className="hero-tri-blur" />
-      <img src={hero_blur} alt="" className="hero-blur-bg" />
     </section>
   );
 };

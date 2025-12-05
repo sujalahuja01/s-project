@@ -1,0 +1,120 @@
+.expert {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 200px;
+}
+.cnt {
+  display: flex;
+  position: relative;
+}
+.expert-container {
+  width: 1320px;
+  max-width: 100%;
+  text-align: center;
+  position: relative; /* arrows positioned relative to this */
+}
+
+.expert-title {
+  font-size: 56px;
+  font-weight: 700;
+}
+.expert-title span {
+  color: var(--brand-orange);
+}
+
+.expert-subtitle {
+  /* opacity: 0.7; */
+  max-width: 850px;
+  margin: 15px auto 65px;
+  line-height: 30px;
+  font-size: 20px;
+  font-weight: 400;
+}
+/* ------------------ SERVICES SLIDER (FINAL) ------------------ */
+
+.expert-wrapper {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Slider behaves exactly like the Projects slider */
+.expert-slider {
+  display: flex;
+  gap: 28px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: none;
+  padding: 20px 0;
+  width: 100%;
+}
+
+.expert-slider::-webkit-scrollbar {
+  display: none;
+}
+
+/* FIXED card width (just like projects) */
+.service-card {
+  min-width: 300px;
+  flex-shrink: 0;
+  scroll-snap-align: center;
+}
+.expert-arrow-right {
+  position: absolute;
+  top: 60%;
+  right: -5%;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+}
+.expert-arrow-left {
+  position: absolute;
+  top: 60%;
+  left: -5%;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+}
+
+.expert-arrow {
+  position: absolute;
+  top: 50%;
+  /* transform: translateY(-50%); */
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  transition: 0.2s ease;
+}
+
+.expert-arrow img {
+  width: 4rem;
+  height: 4rem;
+}
+
+.expert-arrow:hover {
+  transform: scale(1.1);
+}
+@media (max-width: 1460px) {
+  .expert-container {
+    max-width: 90%;
+  }
+  .cnt {
+    max-width: 90%;
+  }
+}
+@media (max-width: 575px) {
+  .expert-container h2 {
+    font-size: 36px;
+    line-height: 1.25;
+  }
+
+  .expert-container p {
+    font-size: 20px;
+  }
+}

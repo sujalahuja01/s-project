@@ -1,0 +1,32 @@
+.service-card {
+  width: 312px;
+  height: 408px;
+  border: 2px solid var(--primary-white);
+  border-radius: 2rem;
+  display: flex;
+}
+.service-card-content {
+  display: flex;
+  flex-direction: column; /* stack vertically */
+  justify-content: space-between;
+  padding: 80px 10px 50px 10px;
+  align-items: center;
+}
+.service-card-content img {
+  flex-shrink: 0; /* Prevent shrinking */
+  flex-grow: 0; /* Prevent stretching (THIS fixes your problem) */
+  align-self: center; /* optional */
+}
+.service-card-content h3 {
+  font-weight: 700;
+  font-size: 26px;
+}
+.service-card-content p {
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 25px;
+}
+.service-card-span {
+  font-size: 20px;
+  font-weight: 300;
+}

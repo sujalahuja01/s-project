@@ -1,14 +1,14 @@
-import Navbar from "../../components/Navbar/Navbar.jsx";
-import Hero from "../../components/Hero/Hero.jsx";
-import Logos from "../../components/Logos/Logos.jsx";
-import About from "../../components/About/About.jsx";
-import Blog from "../../components/Blog/Blog.jsx";
-import Contact from "../../components/Contact/Contact.jsx";
-import Testimonial from "../../components/Testimonials/Testimonials.jsx";
-import Projects from "../../components/Projects/Projects.jsx";
-import Services from "../../components/Services/Services.jsx";
-import Explore from "../../components/Explore/Explore.jsx";
-import Footer from "../../components/Footer/Footer.jsx";
+import Navbar from "../../sections/Navbar/Navbar.jsx";
+import Hero from "../../sections/Hero/Hero.jsx";
+import Logos from "../../sections/Logos/Logos.jsx";
+import About from "../../sections/About/About.jsx";
+import Blog from "../../sections/Blog/Blog.jsx";
+import Contact from "../../sections/Contact/Contact.jsx";
+import Testimonial from "../../sections/Testimonials/Testimonials.jsx";
+import Projects from "../../sections/Projects/Projects.jsx";
+import Services from "../../sections/Services/Services.jsx";
+import Explore from "../../sections/Explore/Explore.jsx";
+import Footer from "../../sections/Footer/Footer.jsx";
 
 const HomePage = () => {
   return (
@@ -20,7 +20,7 @@ const HomePage = () => {
         <About />
         <Services />
         <Projects />
-        {/* <Testimonial /> */}
+        <Testimonial />
         <Blog />
         <Contact />
         <Explore />

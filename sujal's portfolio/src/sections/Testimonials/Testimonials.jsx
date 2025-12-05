@@ -1,10 +1,12 @@
 import React, { useState, useRef } from "react";
 import "./Testimonials.css";
-import quote from "@/assets/quote.svg";
+import quote from "@/assets/testi-quote.svg";
 import left_arrow from "@/assets/left-arrow.svg";
 import right_arrow from "@/assets/right-arrow.svg";
 
 import { blogs } from "../../utils/content.js"; //
+import bow from "@/assets/bow.svg";
+import testi_blur from "@/assets/testi-blur.png";
 
 const Testimonial = () => {
   const [active, setActive] = useState(0);
@@ -31,7 +33,12 @@ const Testimonial = () => {
   return (
     <section className="testi">
       <div className="testi-container">
-        <p className="testi-label">Testimonial 𓆩♡𓆪</p>
+        <p className="testi-label">
+          Testimonial
+          <span>
+            <img src={bow} alt="" />
+          </span>
+        </p>
 
         <h2 className="testi-title">
           What My <span>Clients</span> Say
@@ -47,24 +54,24 @@ const Testimonial = () => {
 
             <p className="testi-desc">{blogs[active].description}</p>
 
-            <div className="testi-nav">
-              <button className="testi-btn" onClick={prevSlide}>
-                <img src={left_arrow} alt="prev" />
-              </button>
-
-              <button className="testi-btn" onClick={nextSlide}>
-                <img src={right_arrow} alt="next" />
-              </button>
-            </div>
-
-            <div className="testi-dots">
-              {blogs.map((_, i) => (
-                <span
-                  key={i}
-                  className={`testi-dot ${i === active ? "active" : ""}`}
-                  onClick={() => setActive(i)}
-                ></span>
-              ))}
+            <div className="testi-controls">
+              <div className="testi-nav">
+                <button className="testi-btn" onClick={prevSlide}>
+                  <img src={left_arrow} alt="prev" />
+                </button>
+                <div className="testi-dots">
+                  {blogs.map((_, i) => (
+                    <span
+                      key={i}
+                      className={`testi-dot ${i === active ? "active" : ""}`}
+                      onClick={() => setActive(i)}
+                    ></span>
+                  ))}
+                </div>
+                <button className="testi-btn" onClick={nextSlide}>
+                  <img src={right_arrow} alt="next" />
+                </button>
+              </div>
             </div>
           </div>
 
@@ -73,22 +80,28 @@ const Testimonial = () => {
             onTouchStart={handleTouchStart}
             onTouchEnd={handleTouchEnd}
           >
-            {blogs.map((blog, i) => {
-              const index = (i + active) % blogs.length;
+            {blogs.map((_, i) => {
+              // circular indexing for infinite loop
+              const index = (active + i) % blogs.length;
 
               return (
-                <img
+                <div
                   key={i}
-                  src={blogs[index].img}
-                  className={`testi-card ${
-                    i === 0 ? "active-card" : "small-card"
+                  className={`testi-card-wrapper ${
+                    i === 0 ? "active-wrapper" : "inactive-wrapper"
                   }`}
-                  alt=""
-                />
+                >
+                  <img
+                    src={blogs[index].img}
+                    alt=""
+                    className="testi-card-img"
+                  />
+                </div>
               );
             })}
           </div>
         </div>
+        {/* <img src={testi_blur} alt="" className="testi-blur" /> */}
       </div>
     </section>
   );

@@ -1,6 +1,6 @@
 import React from "react";
 import "./Explore.css";
-// import crystal from "@/assets/crystal.svg";
+import sphere from "@/assets/sphere.svg";
 
 const Explore = () => {
   return (
@@ -14,7 +14,7 @@ const Explore = () => {
         </div>
 
         <div className="cta-right">
-          {/* <img src={crystal} alt="icon" className="cta-icon" /> */}
+          <img src={sphere} alt="icon" className="cta-icon" />
         </div>
       </div>
     </section>

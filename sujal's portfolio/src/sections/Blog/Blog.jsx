@@ -70,7 +70,7 @@ const Blog = () => {
         </div>
       </div>
 
-      <img src={blog_blur} alt="" className="blog-blur" />
+      {/* <img src={blog_blur} alt="" className="blog-blur" /> */}
     </section>
   );
 };

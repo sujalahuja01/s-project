@@ -8,6 +8,7 @@ import facebook from "@/assets/fb.svg";
 import insta from "@/assets/insta.svg";
 import xicon from "@/assets/x.svg";
 import dribbble from "@/assets/dribble.svg";
+import bow from "@/assets/bow.svg";
 
 export default function Contact() {
   return (
@@ -78,10 +79,15 @@ export default function Contact() {
           </div>
         </aside>
 
-        <main className="contact-right">
+        <div className="contact-right">
           <form className="contact-form">
             <div className="contact-form-head">
-              <h3>Add Details</h3>
+              <h3>
+                Add Details
+                <span>
+                  <img src={bow} alt="" />
+                </span>
+              </h3>
             </div>
 
             <label className="contact-field">
@@ -91,7 +97,11 @@ export default function Contact() {
 
             <label className="contact-field">
               <span className="contact-field-label">Email Address*</span>
-              <input type="email" placeholder="Email" />
+              <input
+                className="contact-field-input"
+                type="email"
+                placeholder="Email"
+              />
             </label>
 
             <label className="contact-field">
@@ -111,7 +121,7 @@ export default function Contact() {
               <button className="contact-submit-btn">Submit</button>
             </div>
           </form>
-        </main>
+        </div>
       </div>
     </section>
   );

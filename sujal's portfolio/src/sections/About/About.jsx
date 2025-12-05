@@ -62,8 +62,8 @@ const About = () => {
             Download CV
           </button>
         </div>
+        {/* <img src={blur_bg} alt="" className="blur-bg" /> */}
       </div>
-      <img src={blur_bg} alt="" className="blur-bg" />
     </section>
   );
 };
