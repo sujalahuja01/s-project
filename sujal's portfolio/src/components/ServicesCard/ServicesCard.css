@@ -7,15 +7,15 @@
 }
 .service-card-content {
   display: flex;
-  flex-direction: column; /* stack vertically */
+  flex-direction: column;
   justify-content: space-between;
   padding: 80px 10px 50px 10px;
   align-items: center;
 }
 .service-card-content img {
-  flex-shrink: 0; /* Prevent shrinking */
-  flex-grow: 0; /* Prevent stretching (THIS fixes your problem) */
-  align-self: center; /* optional */
+  flex-shrink: 0;
+  flex-grow: 0;
+  align-self: center;
 }
 .service-card-content h3 {
   font-weight: 700;
@@ -32,17 +32,17 @@
 }
 @media (max-width: 575px) {
   .service-card {
-    min-width: 220px; /* was 300px — shrink */
-    height: auto; /* allow flexible height */
-    padding: 20px 0; /* optional */
+    min-width: 220px;
+    height: auto;
+    padding: 20px 0;
   }
 
   .service-card-content {
-    padding: 40px 10px; /* reduce spacing */
+    padding: 40px 10px;
   }
 
   .service-icon {
-    width: 60px; /* smaller icons */
+    width: 60px;
     height: auto;
   }
 }
